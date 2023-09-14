@@ -1,24 +1,28 @@
-const fs = require('fs');
-const util = require('util');
+const notes = require('express').Router();
+const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
+const uuid = require('../helpers/uuid')
 
-const readFromFile = util.promisify(fs.readFile);
+notes.get('/', (req, res) => {
+    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+});
 
-const writeToFile = (destination, content) => {
-    fs.writeFile(destination, JSON.stringify(content, null, 4), (err) => {
-        err ? console.error(err) : console.info(`\nData written to ${destination}`)
-    });
-};
+notes.post('/', (req, res) => {
+    console.log(req.body);
 
-const readAndAppend = (content, file) => {
-    fs.readFile(file, 'utf8', (err, data) => {
-        if (err) {
-            console.err(err)
-        } else {
-            const parsedData = JSON.parse(data);
-            parsedData.push(content);
-            writeToFile(file, parsedData);
-        }
-    });
-};
+    const { title, text } = req.body;
 
-module.exports = { readFromFile, writeToFile, readAndAppend };
+    if (req.body) {
+        const newNote = {
+            title,
+            text,
+            note_id: uuid(),
+        };
+
+        readAndAppend(newNote, './db/db.json');
+        res.json('Note added successfully');
+    } else {
+        res.errored('Error in adding note');
+    }
+});
+
+module.exports = tips;
