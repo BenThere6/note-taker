@@ -10,14 +10,20 @@ const app = express();
 app.use(clog);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use('/notes', notesRouter);
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
-app.use('/notes', notesRouter);
+// app.get('/notes', (req, res) => {
+//     res.sendFile(path.join(__dirname, '/public/notes.html'))
+// })
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/index.html'))
+})
 
 app.listen(PORT, () => {
     console.log('App listening at PORT ' + PORT)
