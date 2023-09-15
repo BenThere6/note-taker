@@ -1,3 +1,4 @@
+// Custom middleware that logs the requests made to the server
 const clog = (req, res, next) => {
     const fgCyan = '\x1b[36m';
     switch (req.method) {
@@ -12,7 +13,6 @@ const clog = (req, res, next) => {
       default:
         console.log(`📙 ${fgCyan}${req.method} request to ${req.path}`);
     }
-  
     next();
   };
   

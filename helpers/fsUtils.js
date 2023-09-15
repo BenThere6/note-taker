@@ -1,6 +1,7 @@
 const fs = require('fs');
 const util = require('util');
 
+// These are all functions to read and/or update the json database
 const readFromFile = util.promisify(fs.readFile);
 
 const writeToFile = (destination, content) => {
