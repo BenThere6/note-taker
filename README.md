@@ -30,8 +30,7 @@ This project is developed as part of a school assignment for Rutgers University.
 
 Enjoy the simplicity and efficiency of the Dynamic Notebook App for all your note-taking needs!
 
-
-![Screenshot]()
+![Screenshot](./images/Screenshot%202023-09-15%20at%2012.14.25%20PM.png)
 
 ## Contact Information
 
