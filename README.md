@@ -20,7 +20,7 @@ This project is developed as part of a school assignment for Rutgers University.
 
 ## Usage
 
-1. **Access the App**: Visit the website <u>Dynamic Notebook App</u>.
+1. **Access the App**: Visit the website [Dynamic Notebook App](https://dynamic-notebook-1905dcd9f329.herokuapp.com/notes).
 2. **Get Started**: Click the "Get Started" button on the main page to enter the note-taking interface.
 3. **Create Notes**: To create a new note, click the '+' icon in the top left corner. Enter a title and body for your note.
 4. **Save Your Notes**: After composing your note, simply click the save icon (also in the top left corner). Your note will be saved and displayed in the list.
