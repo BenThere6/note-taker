@@ -42,7 +42,7 @@ I am here to assist you with any questions or feedback you may have. Thank you f
 
 ## Credits
 
-The foundational codebase was sourced from the following repository: [https://github.com/coding-boot-camp/miniature-eureka](miniature-eureka). This repository served as a starting point for the project, providing valuable insights and inspiration that contributed to the development process. We express our gratitude for the resources made available by the authors of the original codebase.
+The foundational codebase was sourced from the following repository: [miniature-eureka](https://github.com/coding-boot-camp/miniature-eureka). This repository served as a starting point for the project, providing valuable insights and inspiration that contributed to the development process. We express our gratitude for the resources made available by the authors of the original codebase.
 
 I drew significant inspiration from the activities and coursework offered by Rutgers Coding Bootcamp after initially cloning the starter code. The bootcamp's comprehensive materials and exercises played a pivotal role in guiding me through the development process, ultimately contributing to the successful completion of this project.
 
